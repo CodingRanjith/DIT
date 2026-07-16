@@ -14,20 +14,53 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  // Mobile nav
+  // Mobile nav + backdrop
+  let backdrop = document.querySelector(".nav-backdrop");
+  if (!backdrop) {
+    backdrop = document.createElement("div");
+    backdrop.className = "nav-backdrop";
+    backdrop.setAttribute("aria-hidden", "true");
+    document.body.appendChild(backdrop);
+  }
+
+  const setNavOpen = (open) => {
+    if (!menuToggle || !nav) return;
+    menuToggle.classList.toggle("open", open);
+    nav.classList.toggle("open", open);
+    backdrop.classList.toggle("show", open);
+    document.body.style.overflow = open ? "hidden" : "";
+    menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  };
+
+  const closeNav = () => setNavOpen(false);
+
   if (menuToggle && nav) {
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-controls", "main-nav");
+    if (!nav.id) nav.id = "main-nav";
+
     menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("open");
-      nav.classList.toggle("open");
-      document.body.style.overflow = nav.classList.contains("open") ? "hidden" : "";
+      setNavOpen(!nav.classList.contains("open"));
     });
+
+    backdrop.addEventListener("click", closeNav);
+
     nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        menuToggle.classList.remove("open");
-        nav.classList.remove("open");
-        document.body.style.overflow = "";
-      });
+      link.addEventListener("click", closeNav);
     });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeNav();
+    });
+
+    window.addEventListener(
+      "resize",
+      () => {
+        if (window.innerWidth > 900) closeNav();
+      },
+      { passive: true }
+    );
   }
 
   // Scroll reveal with staggered support
@@ -104,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         if (option) select.value = option.value;
         else {
-          // Try exact match on value with spaces
           select.value = productParam;
         }
       }
