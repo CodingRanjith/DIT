@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0B1F33"/><stop offset="1" stop-color="#14304A"/></linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8B5A2B"/><stop offset=".5" stop-color="#C4A35A"/><stop offset="1" stop-color="#6B4226"/></linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="4s" repeatCount="indefinite"/>
+    <rect x="80" y="150" width="240" height="22" rx="3" fill="url(#wood)"/>
+    <rect x="90" y="120" width="220" height="22" rx="3" fill="#A67C52"/>
+    <rect x="100" y="90" width="200" height="22" rx="3" fill="url(#wood)"/>
+    <rect x="110" y="60" width="180" height="22" rx="3" fill="#C4A35A"/>
+  </g>
+  <path d="M95 161h210M105 131h190M115 101h170M125 71h150" stroke="#0B1F33" stroke-opacity=".2" stroke-width="1"/>
+  <circle cx="70" cy="50" r="2.5" fill="#C9A227" opacity=".5">
+    <animate attributeName="cy" values="50;38;50" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="330" cy="45" r="2" fill="#E0C35A" opacity=".55">
+    <animate attributeName="cy" values="45;32;45" dur="2.7s" begin=".5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="200" y="210" text-anchor="middle" fill="#C9A227" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="3" opacity=".75">TIMBER &amp; WOOD</text>
+</svg>

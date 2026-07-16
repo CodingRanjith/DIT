@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0B1F33"/><stop offset="1" stop-color="#14304A"/></linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="3.5s" repeatCount="indefinite"/>
+    <rect x="130" y="45" width="140" height="150" rx="6" fill="#1A2332" stroke="#C9A227" stroke-width="2"/>
+    <rect x="145" y="60" width="50" height="35" rx="3" fill="#0B1F33" stroke="#C9A227" stroke-opacity=".5"/>
+    <rect x="205" y="60" width="50" height="35" rx="3" fill="#0B1F33" stroke="#C9A227" stroke-opacity=".5"/>
+    <circle cx="170" cy="77" r="6" fill="#C9A227">
+      <animate attributeName="opacity" values="1;.35;1" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="230" cy="77" r="6" fill="#4ADE80">
+      <animate attributeName="opacity" values=".35;1;.35" dur="1.4s" begin=".7s" repeatCount="indefinite"/>
+    </circle>
+    <rect x="150" y="115" width="40" height="24" rx="3" fill="#14304A"/>
+    <rect x="210" y="115" width="40" height="24" rx="3" fill="#14304A"/>
+    <rect x="158" y="120" width="12" height="14" rx="2" fill="#C9A227"/>
+    <rect x="218" y="120" width="12" height="14" rx="2" fill="#E0C35A"/>
+  </g>
+  <path d="M60 80 Q100 100 130 90" stroke="#C9A227" stroke-width="3" fill="none" opacity=".6">
+    <animate attributeName="d" dur="3s" repeatCount="indefinite"
+      values="M60 80 Q100 100 130 90;M60 80 Q100 60 130 90;M60 80 Q100 100 130 90"/>
+  </path>
+  <path d="M270 90 Q310 70 350 100" stroke="#E0C35A" stroke-width="3" fill="none" opacity=".5">
+    <animate attributeName="d" dur="3.2s" begin=".4s" repeatCount="indefinite"
+      values="M270 90 Q310 70 350 100;M270 90 Q310 110 350 100;M270 90 Q310 70 350 100"/>
+  </path>
+  <path d="M60 140 Q90 160 130 150" stroke="#94A3B8" stroke-width="2.5" fill="none" opacity=".5"/>
+  <text x="200" y="220" text-anchor="middle" fill="#C9A227" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="2" opacity=".75">ELECTRICAL</text>
+</svg>

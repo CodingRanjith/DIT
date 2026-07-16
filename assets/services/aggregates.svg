@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#071521"/><stop offset="1" stop-color="#14304A"/></linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#bg)"/>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="3.8s" repeatCount="indefinite"/>
+    <ellipse cx="140" cy="150" rx="45" ry="35" fill="#64748B"/>
+    <ellipse cx="200" cy="165" rx="55" ry="40" fill="#94A3B8"/>
+    <ellipse cx="270" cy="145" rx="40" ry="32" fill="#718096"/>
+    <ellipse cx="175" cy="120" rx="28" ry="22" fill="#A0AEC0"/>
+    <ellipse cx="245" cy="125" rx="30" ry="24" fill="#CBD5E1"/>
+    <ellipse cx="110" cy="175" rx="25" ry="18" fill="#4A5568"/>
+    <ellipse cx="300" cy="175" rx="32" ry="22" fill="#5A6A7A"/>
+  </g>
+  <circle cx="120" cy="70" r="3" fill="#C9A227" opacity=".5">
+    <animate attributeName="cy" values="70;55;70" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="280" cy="60" r="2.5" fill="#E0C35A" opacity=".55">
+    <animate attributeName="cy" values="60;45;60" dur="2.9s" begin=".4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="200" cy="50" r="2" fill="#C9A227" opacity=".4">
+    <animate attributeName="cy" values="50;38;50" dur="3.1s" begin=".8s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M50 205h300" stroke="#C9A227" stroke-opacity=".25" stroke-width="2"/>
+  <text x="200" y="225" text-anchor="middle" fill="#C9A227" font-family="sans-serif" font-size="12" font-weight="700" letter-spacing="3" opacity=".7">AGGREGATES</text>
+</svg>
